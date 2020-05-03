@@ -1,43 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
 } 
 
+/* Variables in CSS should be declared within a CSS selector that defines its scope. */
+/* Here I use :root for a global scope */
+:root {
+    --first-color: #EEEEEE;
+    --second-color: #FF6D7A;
+    --third-color: #01181D;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
 
 .container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-areas: 
-        "h h h h h h h h h h h h"
-        "p p p p p p p p p p p p"
-        "i i i i i i j j j j j j"
-        "o o o o o o o o o o o o";
-    gap: 20px;
+    column-gap: 20px;
 } 
 
 header {
-    /* grid-column: 1 / -1; */
-    grid-area: h;
+    grid-column: span 12;
+}
+
+nav {
+    grid-column: span 12;
+    padding: 10px 0;
+    background-color: var(--second-color);
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+
 }
 
 nav > ul > li {
+    padding: 30px 0px 30px 30px;
     display: inline;
+    font-weight: 300;
+    text-transform: uppercase;
 }
 
-#product {
-    grid-area: p;
+nav > ul > li > a {
+    text-decoration: none;
+    color: black;
+}
+
+#header-content {
+    padding: 100px 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background-color: var(--first-color);
+}
+
+#header-heading {
+    padding: 30px;
+    text-transform: uppercase;
+    grid-column: span 9;
+    font-size: 32px;
+    font-weight: 700;
+    align-self: center;
+}
+
+#header-img {
+    padding: 30px;
+    grid-column: span 3;
+    width: 50%;
+    min-width: 100px;
+    align-self: center;
+    justify-self: center;
+}
+
+#video-wrapper {
+    grid-column: span 12;
+    width: 100%;
+    background-color: var(--third-color);
+}
+
+#video-div {
+    width: 100%;
+    max-width: 1280px;
+    margin: auto;
+}
+
+#video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+    height: 0;
+}
+
+#video-container iframe, .video-container object, .video-container embed {
+	position:absolute;
+	top: 0;
+	left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#information {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column: span 12;
+    column-gap: 30px;
+    background-color: var(--first-color);
+    padding: 100px 30px;
 }
 
 #information-1 {
-    grid-area: i;
+    grid-column: span 6;
 }
 
 #information-2 {
-    grid-area: j;
+    grid-column: span 6;
 }
 
-#order {
-    /* grid-row: 5; */
-    /* grid-column: 1 / -1; */
-    grid-area: o;
+#form {
+    grid-column: span 12;
+    padding: 100px 30px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+#form > #email {
+    width: 50%;
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid var(--second-color);
+    padding: 20px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+#form > #submit {
+    border-radius: 5px;
+    background-color: var(--second-color);
+    margin-top: 20px;
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    border: 0;
+}
+
+footer {
+    display: flex;
+    grid-column: span 12;
+    background-color: var(--third-color);
+    align-items: center;
+    justify-items: center;
+    color: white;
+    padding: 10px 30px;
+}
+
+footer > p {
+    text-align: center;
+    width: 100%;
+}
+
+footer > p > a {
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 500px) {
+    #header-heading {
+        grid-column: span 12;
+    }
+
+    #header-content {
+        padding: 25px 0;
+    }
+
+    #header-img {
+        grid-column: span 12;
+    }
+
+    #information {
+        padding: 25px 0;
+    }
+
+    #information-1 {
+        grid-column: span 12;
+    }
+    
+    #information-2 {
+        grid-column: span 12;
+        padding-top: 25px;
+    }
+
 }

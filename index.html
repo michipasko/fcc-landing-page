@@ -6,32 +6,51 @@
     <body>
         <div class="container">
             <header id="header">
-                header
-                <!-- <nav id="nav-bar">
-                    <ul>
-                        <li><a href="#product">The Product</a></li>
-                        <li><a href="#information">Tell me more</a></li>
-                        <li><a href="#order">Order Now</a></li>
-                    </ul>
-                </nav> -->
+                <nav id="nav-bar">
+                        <ul>
+                            <li><a class="nav-link" href="#video">Video</a></li>
+                            <li><a class="nav-link" href="#information">Additional information</a></li>
+                            <li><a class="nav-link" href="#form">Order Now</a></li>
+                        </ul>
+                </nav>
+                <div id="header-content">
+                    <div id="header-heading">Please wash your hands. And fight Corona.</div>
+                    <img id="header-img" src="./img/coronavirus.png">
+                </div>
             </header> 
 
-            <div id="product">
-                product
+            <!-- Videos -->
+            <div id="video-wrapper">
+                <div id="video-div">
+                    <div id="video-container">
+                        <iframe id="video" width="640" height="352" src="https://www.youtube.com/embed/3SfHdSHK-g0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
 
-            <div id="information-1">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            <!-- Additional information -->
+            <div id="information">
+                <div id="information-1">
+                    <h3>Read this</h3>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                </div>
+
+                <div id="information-2">
+                    <h3>Read that</h3>
+                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                </div>
             </div>
 
-            <div id="information-2">
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-            </div>
-
-            <div id="order">
-                <input type="email" placeholder="michael.pankow@icloud.com">
-            </div>
+            <form id="form" action="https://www.freecodecamp.org/email-submit">
+                <input id="email" type="email" placeholder="Your email" name="email">
+                <input id="submit" type="submit" value="Get soap offerings for free">
+            </form>
+            
+            <footer>
+               <p>Icons made by <a href="https://www.flaticon.com/authors/vitaly-gorbachev" title="Vitaly Gorbachev">Vitaly Gorbachev</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p> 
+            </footer>
 
         </div>
+        <!-- <script src="test.js"></script> -->
     </body>
 </html>
