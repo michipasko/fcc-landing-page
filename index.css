@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+} 
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: 
+        "h h h h h h h h h h h h"
+        "p p p p p p p p p p p p"
+        "i i i i i i j j j j j j"
+        "o o o o o o o o o o o o";
+    gap: 20px;
+} 
+
+header {
+    /* grid-column: 1 / -1; */
+    grid-area: h;
+}
+
+nav > ul > li {
+    display: inline;
+}
+
+#product {
+    grid-area: p;
+}
+
+#information-1 {
+    grid-area: i;
+}
+
+#information-2 {
+    grid-area: j;
+}
+
+#order {
+    /* grid-row: 5; */
+    /* grid-column: 1 / -1; */
+    grid-area: o;
+}
