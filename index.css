@@ -169,7 +169,7 @@ footer > p > a {
     color: white;
 }
 
-@media screen and (max-width: 500px) {
+@media only screen and (max-width: 400pt) and (orientation: portrait) {
     #header-heading {
         grid-column: span 12;
     }
